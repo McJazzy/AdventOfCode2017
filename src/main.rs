@@ -1,6 +1,12 @@
 extern crate getopts;
 use getopts::Options;
 use std::env;
+use std::fs::File;
+use std::io::prelude::*;
+
+trait solution {
+    fn solve(&self, part1 : bool);
+}
 
 struct OptionT {
     part1: bool,
@@ -51,12 +57,23 @@ fn parse_args(args : Vec<String>) -> OptionT {
     return opts;
 }
 
+struct day1 {}
+impl solution for day1 {
+    fn solve(&self, part1 : bool) {
+        let mut f = File::open("input.txt").expect("file not found");
+        let mut contents = String::new();
+        f.read_to_string(&mut contents).expect("something went wrong reading the file");
+
+    }
+}
 
 fn main() {
     let args: Vec<String> = env::args().collect();
     parse_args(args);
-}
 
+    let day : day1 = day1{};
+    day.solve(false);
+}
 
 
 
