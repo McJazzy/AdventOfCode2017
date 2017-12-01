@@ -1,7 +1,0 @@
-[package]
-name = "advent_of_code"
-version = "0.1.0"
-authors = ["Michiel <michieljaspers90@gmail.com>"]
-
-[dependencies]
-getopts = "0.2"
