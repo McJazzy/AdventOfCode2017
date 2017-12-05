@@ -5,7 +5,9 @@
 enum Day {
 	Day1 = 1,
 	Day2,
-	Day3
+	Day3,
+	Day4,
+	Day5
 };
 
 template<Day DAY>
